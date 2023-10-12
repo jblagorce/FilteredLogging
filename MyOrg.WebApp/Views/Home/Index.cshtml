@@ -1,0 +1,75 @@
+﻿@model MyOrg.WebApp.Models.Home.IndexViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            Hello user @Model.UserName on tenant @Model.TenantName
+
+            <div class="container">
+                <div class="row p-1">
+                    <div class="col-1">Side 1</div>
+                    <div class="col-5"><input type="text" id="side1" value="400" /></div>
+                    <div class="col-6 text-end">Change user :</div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-1">Side 2</div>
+                    <div class="col-5"><input type="text" id="side2" value="300" /></div>
+                    <div class="col-6 text-end"><input type="text" id="userName" value="" /></div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <input type="button" id="processButton" value="Process" />
+                    </div>
+                    <div class="col-6 text-end">
+                        <input type="button" id="changeUserButton" value="ChangeUser" />
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-1">Result : </div>
+                    <div class="col-5" id="resultDiv"></div>
+                    <div class="col-6 text-end"></div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-6">
+                        Main
+                    </div>
+                    <div class="col-6">
+                        Debug
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-6 text-wrap">
+                        <ul id="messagesListMain" class="text-wrap"></ul>
+                    </div>
+                    <div class="col-6 text-wrap">
+                        <ul id="messagesListDebug" class="text-wrap"></ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/app.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

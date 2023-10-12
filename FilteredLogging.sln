@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyOrg.WebApp", "MyOrg.WebApp\MyOrg.WebApp.csproj", "{F4F04AD8-2707-4CF9-878E-DCD4966E0BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrg.DynamicLogging.BroadCast.Redis", "MyOrg.DynamicLogging.BroadCast.Redis\MyOrg.DynamicLogging.BroadCast.Redis.csproj", "{13EA8AE9-9061-47EF-9F27-510483A7042D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrg.DynamicLogging.BroadCast.WebPubSub", "MyOrg.DynamicLogging.BroadCast.WebPubSub\MyOrg.DynamicLogging.BroadCast.WebPubSub.csproj", "{A8FF235C-730B-4D94-BB07-E7AE679C03D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrg.DynamicLogging", "MyOrg.DynamicLogging\MyOrg.DynamicLogging.csproj", "{28ED7FF6-C838-492C-A373-1A002D35BE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrg.DynamicLogging.AspNetCore", "MyOrg.DynamicLogging.AspNetCore\MyOrg.DynamicLogging.AspNetCore.csproj", "{24DE9B65-296D-453F-870C-FA3BA8BC5A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrg.DynamicLogging.AspNetCore.Serilog", "MyOrg.DynamicLogging.AspNetCore.Serilog\MyOrg.DynamicLogging.AspNetCore.Serilog.csproj", "{01D70FBB-9792-4374-8F1D-2894D9DAA776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F04AD8-2707-4CF9-878E-DCD4966E0BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F04AD8-2707-4CF9-878E-DCD4966E0BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F04AD8-2707-4CF9-878E-DCD4966E0BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F04AD8-2707-4CF9-878E-DCD4966E0BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EA8AE9-9061-47EF-9F27-510483A7042D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EA8AE9-9061-47EF-9F27-510483A7042D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EA8AE9-9061-47EF-9F27-510483A7042D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EA8AE9-9061-47EF-9F27-510483A7042D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8FF235C-730B-4D94-BB07-E7AE679C03D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FF235C-730B-4D94-BB07-E7AE679C03D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FF235C-730B-4D94-BB07-E7AE679C03D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FF235C-730B-4D94-BB07-E7AE679C03D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ED7FF6-C838-492C-A373-1A002D35BE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ED7FF6-C838-492C-A373-1A002D35BE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ED7FF6-C838-492C-A373-1A002D35BE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ED7FF6-C838-492C-A373-1A002D35BE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DE9B65-296D-453F-870C-FA3BA8BC5A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DE9B65-296D-453F-870C-FA3BA8BC5A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DE9B65-296D-453F-870C-FA3BA8BC5A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DE9B65-296D-453F-870C-FA3BA8BC5A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D70FBB-9792-4374-8F1D-2894D9DAA776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D70FBB-9792-4374-8F1D-2894D9DAA776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D70FBB-9792-4374-8F1D-2894D9DAA776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D70FBB-9792-4374-8F1D-2894D9DAA776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAE34AFE-7AAF-4940-A947-9FE7515B8F72}
+	EndGlobalSection
+EndGlobal

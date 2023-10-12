@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>35574df1-8375-4f49-b4ee-709933b8390d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Messaging.WebPubSub" Version="1.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Serilog.Enrichers.ClientInfo" Version="2.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Map" Version="1.0.2" />
+    <PackageReference Include="Serilog.Sinks.Splunk" Version="3.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Websocket.Client" Version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="nlog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyOrg.DynamicLogging.AspNetCore.Serilog\MyOrg.DynamicLogging.AspNetCore.Serilog.csproj" />
+    <ProjectReference Include="..\MyOrg.DynamicLogging.AspNetCore\MyOrg.DynamicLogging.AspNetCore.csproj" />
+    <ProjectReference Include="..\MyOrg.DynamicLogging.BroadCast.Redis\MyOrg.DynamicLogging.BroadCast.Redis.csproj" />
+    <ProjectReference Include="..\MyOrg.DynamicLogging.BroadCast.WebPubSub\MyOrg.DynamicLogging.BroadCast.WebPubSub.csproj" />
+    <ProjectReference Include="..\MyOrg.DynamicLogging\MyOrg.DynamicLogging.csproj" />
+  </ItemGroup>
+
+</Project>
