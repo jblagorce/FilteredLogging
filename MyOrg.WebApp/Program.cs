@@ -29,9 +29,12 @@ builder.Host.SetupDynamicSerilog(
     sp => new Serilog.Core.ILogEventEnricher[] { sp.GetRequiredService<TenantNameEnricher>(), sp.GetRequiredService<UserNameEnricher>() },
     (sp, conf) => conf.SignalRSink(() => sp.GetRequiredService<IHubContext<MainHub>>(), false),
     (sp, conf) => conf.SignalRSink(() => sp.GetRequiredService<IHubContext<MainHub>>(), true))
-    .WithWebPubSubNotifications();
+    .WithRedisNotifications();
+    //.WithWebPubSubNotifications();
 
+// Splunk with Redis notifications (need to setup a Splunk)
 //builder.Host.SetupDynamicSerilogToSplunk().WithRedisNotifications();
+// File with Redis notifications
 //builder.Host.SetupDynamicSerilogToFile().WithRedisNotifications();
 
 var app = builder.Build();
