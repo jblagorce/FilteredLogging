@@ -10,6 +10,7 @@ using MyOrg.WebApp.DynamicLogging.WebPubSub;
 using MyOrg.WebApp.Hubs;
 
 using Serilog;
+using MyOrg.DynamicLogging.BroadCast.Loopback;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,13 +30,15 @@ builder.Host.SetupDynamicSerilog(
     sp => new Serilog.Core.ILogEventEnricher[] { sp.GetRequiredService<TenantNameEnricher>(), sp.GetRequiredService<UserNameEnricher>() },
     (sp, conf) => conf.SignalRSink(() => sp.GetRequiredService<IHubContext<MainHub>>(), false),
     (sp, conf) => conf.SignalRSink(() => sp.GetRequiredService<IHubContext<MainHub>>(), true))
-    .WithRedisNotifications();
-    //.WithWebPubSubNotifications();
+    .WithLoopbackNotifications();
+    // .WithWebPubSubNotifications(); // need to setup a Web PubSub
+    // .WithRedisNotifications();   // need to setup a Redis
 
-// Splunk with Redis notifications (need to setup a Splunk)
-//builder.Host.SetupDynamicSerilogToSplunk().WithRedisNotifications();
-// File with Redis notifications
-//builder.Host.SetupDynamicSerilogToFile().WithRedisNotifications();
+    // Splunk with Redis notifications (need to setup a Splunk)
+    // builder.Host.SetupDynamicSerilogToSplunk().WithRedisNotifications();
+
+    // File with Redis notifications
+    //builder.Host.SetupDynamicSerilogToFile().WithRedisNotifications();
 
 var app = builder.Build();
 
